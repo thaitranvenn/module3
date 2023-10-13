@@ -1,0 +1,76 @@
+/* Reset some default margin and padding */
+body,
+h1,
+p {
+    margin: 1px;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Basic styling for the outer boxes */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+/* Basic styling for the outer and inner boxes */
+.box {
+    position: relative;
+    padding: 20px;
+    border: 5px solid black;
+    background-color: rgb(141, 141, 141);
+}
+
+.inner-box {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px;
+}
+
+.inner-box-chicken {
+    background-color: pink;
+}
+
+.inner-box-beef {
+    background-color: rgb(208, 69, 69);
+}
+
+.inner-box-sushi {
+    background-color: rgb(236, 232, 155);
+}
+
+/* Styling for the content */
+.content {
+    margin-top: 30px;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Styling for the titles */
+.title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Media queries for responsive layout */
+
+/* Tablet */
+@media (min-width: 750px) and (max-width: 1199px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .outer-box-sushi {
+        grid-column: span 2;
+    }
+}
+
+/* Mobile */
+@media (max-width: 750px){
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
